@@ -5,8 +5,8 @@ export default {
                </div>`,
     data(){
         return{
-        text: "Какой-то текст"
+            text: "Какой-то текст"
         }
-    }
+    } 
 }
 </script>
