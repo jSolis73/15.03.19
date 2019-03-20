@@ -24,6 +24,7 @@ export default {
 
     p {
         color: aliceblue;
-        text-align: center
+        text-align: center;
+            margin-block-start: 0;
     }
 </style>

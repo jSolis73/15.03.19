@@ -18,4 +18,9 @@ export default {
         box-sizing: border-box;
         background-color: rgb(169, 169, 172);
     }
+
+    ul {
+        margin-block-start: 0;
+        margin-block-end: 0
+    }
 </style>

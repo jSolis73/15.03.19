@@ -13,14 +13,7 @@ export default {
 </script>
 
 <style>
-  #header {
-    margin: 0;
-  }
-
-  #footer {
-    margin: 0;
-  }
-  #content {
+  body {
     margin: 0;
   }
 </style>
