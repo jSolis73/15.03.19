@@ -11,7 +11,7 @@ import Inform from './inform.vue'
 export default {
     data(){
         return{
-            age: 24,
+            age: 17,
             country: 'Германия',
             gender: 'мужской'
         }
