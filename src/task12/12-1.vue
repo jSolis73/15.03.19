@@ -5,15 +5,13 @@
     </div>
 </template>
 <script>
-    let mes21 = 'Здесь мог быть ваш код'; 
+    let mes21 = {mes2: 'Здесь мог быть ваш код'}; 
 export default {
-    data() {
-        return {
-            mes2: mes21 
-        }
+    data: function() {
+        return mes21
     },
     methods: {
-        chMes2(){
+        chMes2: function() {
             this.mes2 = "а теперь здесь мой код"         
         }
     }   
