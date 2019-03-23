@@ -1,15 +1,20 @@
 <template>
     <div>
-        <p v-if = "mes">Здесь мог быть ваш код</p>
-        <p v-else>Теперь здесь мой код</p>
-        <button @click="mes = !mes">Изменить текст</button>
+        <p>{{mes}}</p>
+        <button @click="chMes">Изменить текст</button>
     </div>
 </template>
 <script>
+
 export default {
     data() {
         return {
-        mes: true
+        mes: 'Здесь мог быть ваш код'
+        }
+    },
+    methods: {
+        chMes(){
+            this.mes = 'А теперь здесь мой код'        
         }
     } 
 }

@@ -1,17 +1,21 @@
 <template>
     <div>
-        <p v-if = "mes2">Здесь мог быть ваш код</p>
-        <p v-else>Теперь здесь мой код</p>
-        <button @click="mes2 = !mes2">Изменить текст</button>
+        <p>{{mes2}}</p>
+        <button @click="chMes2">Изменить текст</button>
     </div>
 </template>
 <script>
-let cc ={mes2: true}
+    let mes21 = 'Здесь мог быть ваш код'; 
 export default {
-    data(){
-        return cc 
-    }
-        
-    
+    data() {
+        return {
+            mes2: mes21 
+        }
+    },
+    methods: {
+        chMes2(){
+            this.mes2 = "а теперь здесь мой код"         
+        }
+    }   
 }
 </script>
