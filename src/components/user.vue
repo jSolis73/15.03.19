@@ -7,21 +7,25 @@
                     :changeFunc = "changeCountry" 
         >
         </inform-app>
+        <user-edu :education = "education" ></user-edu>
     </div>
 </template>
 
 <script>
 import Inform from './inform.vue'
+import education from './education.vue'
 export default {
     data(){
         return{
             age: 17,
             country: 'Германия',
-            gender: 'мужской'
+            gender: 'мужской',
+            education: 'высшее'
         }
     },
     components: {
-        informApp: Inform
+        informApp: Inform,
+        userEdu: education
     },
     methods: {
         changeCountry(){
