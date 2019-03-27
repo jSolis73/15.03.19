@@ -5,9 +5,13 @@
                     :country = "country"
                     :gender = "gender"
                     :changeFunc = "changeCountry" 
+                    :education = "education"
         >
         </inform-app>
-        <user-edu :education = "education" ></user-edu>
+        <user-edu :education = "education"
+                  :chEdu="changeEdu" 
+        >
+        </user-edu>
     </div>
 </template>
 
@@ -30,6 +34,9 @@ export default {
     methods: {
         changeCountry(){
             this.country = 'Ирландия'
+        },
+        changeEdu(){
+                this.education = 'среднее специальное'          
         }
     }
 }

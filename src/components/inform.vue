@@ -5,6 +5,7 @@
         <p>Страна: {{country}}. Прописные буквы: {{largeSymb}}</p>
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
         <button @click = "changeFunc()">Изменить страну</button>
+        <p>текущее образование: {{this.education}}</p>
     </div>
 </template>
 
@@ -24,6 +25,9 @@ export default {
         },
         changeFunc: {
             type: Function
+        },
+        education: {
+
         }
     },
     data(){
@@ -47,6 +51,7 @@ export default {
                 years.outerText ='Извините, вы нам не подходите'; 
             }                    
         }
+        
     }
 }
 </script>
