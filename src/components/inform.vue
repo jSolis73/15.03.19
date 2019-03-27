@@ -4,6 +4,7 @@
         <p id = "ages">Возраст: {{age}}.  <button @click = "ageTest">Проверить на ограничение по возрасту</button></p>
         <p>Страна: {{country}}. Прописные буквы: {{largeSymb}}</p>
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
+        <button @click = "changeProp">Изменить свойство "Страна"</button>
     </div>
 </template>
 
@@ -24,14 +25,14 @@ export default {
     },
     data(){
         return {
-        
+            
         }
     },
     computed: {
-        largeSymb(){
+        largeSymb() {
             return this.country.toUpperCase()
         },
-        cut(){
+        cut() {
             return this.gender.substring(0,3)
         }
     },
@@ -42,6 +43,13 @@ export default {
                 let years = document.getElementById('ages');
                 years.outerText ='Извините, вы нам не подходите'; 
             }                    
+        },
+        changeProp() {
+            this.country = 'Ирландия';
+            this.$emit('countryWasChanged', this.country);
+            alert('свойство страна будет изменено на ' + this.country );
+            
+            
         }
     }
 }

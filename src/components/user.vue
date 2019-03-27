@@ -1,9 +1,13 @@
 <template>
-    <inform-app :age="age"
-                :country="country"
-                :gender="gender"
-    >
-    </inform-app>
+    <div>
+        <p>Текущая страна: {{country}}</p>
+        <inform-app :age = "age"
+                    :country = "country"
+                    :gender = "gender"
+                    @countryWasChanged = "country = $event"
+        >
+        </inform-app>
+    </div>
 </template>
 
 <script>
@@ -13,12 +17,13 @@ export default {
         return{
             age: 17,
             country: 'Германия',
-            gender: 'мужской'
+            gender: 'мужской',
+            mes: ''
         }
     },
     components: {
         informApp: Inform
-    }
+    }  
 }
 </script>
 
