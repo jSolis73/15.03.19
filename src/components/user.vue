@@ -1,9 +1,13 @@
 <template>
-    <inform-app :age="age"
-                :country="country"
-                :gender="gender"
-    >
-    </inform-app>
+    <div>
+        <p>Текущая страна: {{country}}</p>
+        <inform-app :age = "age"
+                    :country = "country"
+                    :gender = "gender"
+                    :changeFunc = "changeCountry" 
+        >
+        </inform-app>
+    </div>
 </template>
 
 <script>
@@ -18,6 +22,11 @@ export default {
     },
     components: {
         informApp: Inform
+    },
+    methods: {
+        changeCountry(){
+            this.country = 'Ирландия'
+        }
     }
 }
 </script>

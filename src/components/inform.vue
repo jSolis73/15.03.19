@@ -4,6 +4,7 @@
         <p id = "ages">Возраст: {{age}}.  <button @click = "ageTest">Проверить на ограничение по возрасту</button></p>
         <p>Страна: {{country}}. Прописные буквы: {{largeSymb}}</p>
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
+        <button @click = "changeFunc()">Изменить страну</button>
     </div>
 </template>
 
@@ -20,6 +21,9 @@ export default {
         },
         gender: {
 
+        },
+        changeFunc: {
+            type: Function
         }
     },
     data(){
