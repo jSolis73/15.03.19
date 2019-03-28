@@ -6,18 +6,14 @@
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
         <button @click = "changeFunc()">Изменить страну</button>
         <button @click = "changeEdu">Изменить статус образования</button>
+        <button @click = "changeProp()">Изменить возраст</button>
     </div>
 </template>
 
 <script>
 import {eventBus} from '../main.js'
 export default {
-    //props: ['age', 'country', 'gender'],
     props: {
-        age: {
-            type: Number,
-            required: true
-        },
         country: {
 
         },
@@ -26,13 +22,20 @@ export default {
         },
         changeFunc: {
             
+        },
+        changeProp: {
+
         }
         
     },
     data(){
         return {
-        
+            age: 17
         }
+    },
+    created() {
+        eventBus.$on('chProp', () => {
+            this.age = 20})
     },
     computed: {
         largeSymb(){

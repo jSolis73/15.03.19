@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>Текущая страна: {{country}}</p>
-        <inform-app :age = "age"
+        <inform-app 
                     :country = "country"
                     :gender = "gender"
                     :changeFunc = "changeCountry"            
@@ -17,7 +17,6 @@ import education from './education.vue'
 export default {
     data(){
         return{
-            age: 17,
             country: 'Германия',
             gender: 'мужской',
             
