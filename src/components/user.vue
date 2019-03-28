@@ -4,14 +4,10 @@
         <inform-app :age = "age"
                     :country = "country"
                     :gender = "gender"
-                    :changeFunc = "changeCountry" 
-                    :education = "education"
+                    :changeFunc = "changeCountry"            
         >
         </inform-app>
-        <user-edu :education = "education"
-                  :chEdu="changeEdu" 
-        >
-        </user-edu>
+        <user-edu></user-edu>
     </div>
 </template>
 
@@ -24,7 +20,7 @@ export default {
             age: 17,
             country: 'Германия',
             gender: 'мужской',
-            education: 'высшее'
+            
         }
     },
     components: {
@@ -34,10 +30,8 @@ export default {
     methods: {
         changeCountry(){
             this.country = 'Ирландия'
-        },
-        changeEdu(){
-                this.education = 'среднее специальное'          
         }
+        
     }
 }
 </script>

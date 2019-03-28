@@ -5,11 +5,12 @@
         <p>Страна: {{country}}. Прописные буквы: {{largeSymb}}</p>
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
         <button @click = "changeFunc()">Изменить страну</button>
-        <p>текущее образование: {{this.education}}</p>
+        <button @click = "changeEdu">Изменить статус образования</button>
     </div>
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 export default {
     //props: ['age', 'country', 'gender'],
     props: {
@@ -24,11 +25,9 @@ export default {
 
         },
         changeFunc: {
-            type: Function
-        },
-        education: {
-
+            
         }
+        
     },
     data(){
         return {
@@ -50,6 +49,9 @@ export default {
                 let years = document.getElementById('ages');
                 years.outerText ='Извините, вы нам не подходите'; 
             }                    
+        },
+        changeEdu(){
+                eventBus.$emit('chEdu')          
         }
         
     }

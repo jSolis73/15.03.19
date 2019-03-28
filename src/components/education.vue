@@ -1,20 +1,22 @@
 <template>
     <div>
         <p>Образование: {{education}}</p>
-        <button @click = "chEdu()">Изменить статус образования</button>
     </div>
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 export default {
-    
-    props: {
-        education: {
-
-        },
-        chEdu: {
-            type: Function
+    props: ['chEdu'],
+    data()  {
+        return {
+            education: 'высшее'
         }
+    },
+    created() {
+        eventBus.$on('chEdu', () => {
+            this.education = 'среднее специальное'
+        })
     }
 }
 </script>
