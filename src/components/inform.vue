@@ -6,7 +6,7 @@
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
         <button @click = "changeFunc()">Изменить страну</button>
         <button @click = "changeEdu">Изменить статус образования</button>
-        <button @click = "changeProp()">Изменить возраст</button>
+       
     </div>
 </template>
 
@@ -23,19 +23,14 @@ export default {
         changeFunc: {
             
         },
-        changeProp: {
-
+        age: {
+            
         }
-        
     },
     data(){
         return {
-            age: 17
+           
         }
-    },
-    created() {
-        eventBus.$on('chProp', () => {
-            this.age = 20})
     },
     computed: {
         largeSymb(){

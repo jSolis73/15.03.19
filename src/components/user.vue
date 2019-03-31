@@ -4,7 +4,8 @@
         <inform-app 
                     :country = "country"
                     :gender = "gender"
-                    :changeFunc = "changeCountry"            
+                    :changeFunc = "changeCountry"  
+                    :age="age"        
         >
         </inform-app>
         <user-edu></user-edu>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 import Inform from './inform.vue'
 import education from './education.vue'
 export default {
@@ -19,6 +21,7 @@ export default {
         return{
             country: 'Германия',
             gender: 'мужской',
+            age: 17
             
         }
     },
