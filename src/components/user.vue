@@ -5,7 +5,8 @@
                     :country = "country"
                     :gender = "gender"
                     :changeFunc = "changeCountry"  
-                    :age="age"        
+                    
+                    :chProp = "changeProp"       
         >
         </inform-app>
         <user-edu></user-edu>
@@ -21,7 +22,7 @@ export default {
         return{
             country: 'Германия',
             gender: 'мужской',
-            age: 17
+            
             
         }
     },

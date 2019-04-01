@@ -4,7 +4,7 @@ import App from './App.vue'
 export const eventBus = new Vue({
   methods: {
     changeProp() {
-      eventBus.$emit('chProp')
+      eventBus.$emit('chProp', this.age)
     }
   }
 })
