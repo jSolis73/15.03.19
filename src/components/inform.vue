@@ -6,13 +6,13 @@
         <p>Пол: {{gender}}. Сокращение: {{cut}}</p>
         <button @click = "changeFunc()">Изменить страну</button>
         <button @click = "changeEdu">Изменить статус образования</button>
-        <button @click = "changeProp">Изменить возраст</button>
+        <button @click = "cP">Изменить возраст</button>
        
     </div>
 </template>
 
 <script>
-import {eventBus} from '../main.js'
+import {eventBus, cP} from '../main.js'
 export default {
     props: {
         country: {
@@ -26,7 +26,8 @@ export default {
         },
         chProp: {
             
-        }
+        },
+       
     },
     data(){
         return {

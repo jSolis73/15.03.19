@@ -4,9 +4,7 @@
         <inform-app 
                     :country = "country"
                     :gender = "gender"
-                    :changeFunc = "changeCountry"  
-                    
-                    :chProp = "changeProp"       
+                    :changeFunc = "changeCountry"       
         >
         </inform-app>
         <user-edu></user-edu>
@@ -14,7 +12,7 @@
 </template>
 
 <script>
-import {eventBus} from '../main.js'
+import {eventBus, cP} from '../main.js'
 import Inform from './inform.vue'
 import education from './education.vue'
 export default {

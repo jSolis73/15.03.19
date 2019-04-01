@@ -8,6 +8,7 @@ export const eventBus = new Vue({
     }
   }
 })
+export let cP = eventBus.changeProp()
 new Vue({
   el: '#app',
   render: h => h(App)
