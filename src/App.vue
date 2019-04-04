@@ -1,7 +1,6 @@
 <template>
   <div>
     <cards-app>
-      <h2 slot= "title">{{title}}</h2>
       <p slot = "description">{{description}}</p>
     </cards-app>
   </div>

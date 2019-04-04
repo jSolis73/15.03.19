@@ -1,6 +1,6 @@
 <template>
     <div>
-        <slot name = "title"></slot> 
+        <slot><h2>Солнечная система</h2></slot> 
         <hr>
         <slot name = "description"></slot>   
     </div>
