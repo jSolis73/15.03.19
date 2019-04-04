@@ -2,7 +2,7 @@
   <div class="container" >
     <cards-app>
       <h2 class="row align-items-start">{{title}}</h2>
-      <p class="row align-items-center">{{description}}</p>
+      <p class="h6">{{description}}</p>
     </cards-app>
   </div>
   
