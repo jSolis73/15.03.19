@@ -1,14 +1,22 @@
 <template>
   <div>
-    <cards-app></cards-app>
+    <cards-app>
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+    </cards-app>
   </div>
-  
   
 </template>
 
 <script>
 import Cards from './components/cards.vue'
 export default {
+  data(){
+    return {
+      title: 'Солнечная система',
+      description: ' планетная система, включающая в себя центральную звезду — Солнце — и все естественные космические объекты, вращающиеся вокруг Солнца.'
+    }
+  },
   components: {'cardsApp': Cards }
 }
 </script>
