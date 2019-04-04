@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container" >
     <cards-app>
-      <h2>{{title}}</h2>
-      <p>{{description}}</p>
+      <h2 class="row align-items-start">{{title}}</h2>
+      <p class="row align-items-center">{{description}}</p>
     </cards-app>
   </div>
   
@@ -21,5 +21,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+ 
 </style>
