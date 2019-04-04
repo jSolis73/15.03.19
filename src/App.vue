@@ -1,8 +1,8 @@
 <template>
   <div>
     <cards-app>
-      <h2>{{title}}</h2>
-      <p>{{description}}</p>
+      <h2 slot= "title">{{title}}</h2>
+      <p slot = "description">{{description}}</p>
     </cards-app>
   </div>
   

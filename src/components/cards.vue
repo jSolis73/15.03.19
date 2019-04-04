@@ -1,6 +1,8 @@
 <template>
     <div>
-        <slot></slot>    
+        <slot name = "title"></slot> 
+        <hr>
+        <slot name = "description"></slot>   
     </div>
 </template>
 
