@@ -3,7 +3,9 @@
     <button type = "button" class="btn btn-primary " @click = "component = 'cardsApp'">Млечный путь</button>
     <button type = "button" class="btn btn-success" @click = "component = 'cards2App'">Галактика Андромеды</button>
     <button type = "button" class="btn btn-info" @click = "component = 'authApp'">Автор работ</button>
-    <component :is = "component"></component>
+    <keep-alive>
+      <component :is = "component"></component>
+    </keep-alive>
   </div>
   
 </template>
@@ -15,7 +17,7 @@ import Author from './components/author.vue'
 export default {
   data(){
     return {
-      component: 'cardsApp'
+      component: 'cardsApp',
     }
   },
   components: {
