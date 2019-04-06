@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "table table-dark">
     <cards-app>
       <h2 slot= "title">{{title}}</h2>
       <p slot = "description">{{description}}</p>
