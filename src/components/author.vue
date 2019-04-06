@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="text-info">
         <slot><b>Фамилия</b>: Коперник</slot>
         <hr>
         <slot><b>Имя</b>: Николай</slot>
