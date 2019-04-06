@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-info border border-dark align-top">
     <cards-app>
       <p slot = "description">{{description}}</p>
     </cards-app>
