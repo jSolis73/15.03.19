@@ -1,22 +1,28 @@
 <template>
   <div class="text-info border border-dark align-top">
-    <cards-app>
-      <p slot = "description">{{description}}</p>
-    </cards-app>
+    <button type = "button" @click = "component = 'cardsApp'">Млечный путь</button>
+    <button type = "button" @click = "component = 'cards2App'">Галактика Андромеды</button>
+    <button type = "button" @click = "component = 'authApp'">Автор работ</button>
+    <component :is = "component"></component>
   </div>
   
 </template>
 
 <script>
 import Cards from './components/cards.vue'
+import Cards2 from './components/cards2.vue'
+import Author from './components/author.vue'
 export default {
   data(){
     return {
-      title: 'Солнечная система',
-      description: ' планетная система, включающая в себя центральную звезду — Солнце — и все естественные космические объекты, вращающиеся вокруг Солнца.'
+      component: 'cardsApp'
     }
   },
-  components: {'cardsApp': Cards }
+  components: {
+    'cardsApp': Cards,
+    'cards2App': Cards2,
+    'authApp': Author
+  }
 }
 </script>
 
