@@ -15,6 +15,11 @@
 
 <script>
 export default {
-    
+    activated() {
+        console.log('Компонент "author" был активирован')
+    },
+    deactivated() {
+        console.log('Компонент "author" был уничтожен')
+    }
 }
 </script>

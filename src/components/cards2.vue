@@ -10,6 +10,12 @@
 
 <script>
 export default {
+    activated() {
+        console.log('Компонент "cards2" был активирован')
+    },
+    deactivated() {
+        console.log('Компонент "cards2" был уничтожен')
+    },
     data(){
         return {
             counter: '0'
