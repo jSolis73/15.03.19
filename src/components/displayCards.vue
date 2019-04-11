@@ -1,11 +1,11 @@
 <template>
-    <table>
-        <tbody>
-            <tr>
-                <td v-for = "card in arrayCards" class="table table-bordered table-dark">{{card.title}} {{card.text}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class = "col-3" v-for = "card in arrayCards">
+                {{card.title}} <br> {{card.text}}
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -15,11 +15,5 @@ export default {
 </script>
 
 <style>
-tr {
-    position: relative;
-}   
-td {
-  width: 30px;
-  height: 30px;
-}  
+
 </style>
