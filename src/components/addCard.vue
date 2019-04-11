@@ -41,14 +41,11 @@ export default {
                     document.getElementById('text').value = ''   
                 }, 100);
             }
-            else if (this.arrayCards.length > 1) {
+            else if (this.arrayCards.length > 10) {
                     return {
                         al:'Внимание!!! Превышено максимальное значение карточек.' 
                     }    
-            }
-            
-            
-            
+            }  
         }
     }
 }
