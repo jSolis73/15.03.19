@@ -1,6 +1,6 @@
 <template>
   <div >
-    
+    <add-card></add-card>
   </div>
   
 </template>
@@ -9,7 +9,10 @@
 import AddCard from './components/addCard.vue'
 import DisplayCards from './components/displayCards.vue'
 export default {
-  
+  components: {
+    'addCard': AddCard,
+    'displayCards': DisplayCards
+  }
 }
 </script>
 
