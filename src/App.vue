@@ -1,6 +1,7 @@
 <template>
   <div >
-    <add-card></add-card>
+    <add-card :arrayCards = "arrayCards"></add-card>
+    <displayCards :arrayCards = "arrayCards"></displayCards> 
   </div>
   
 </template>
@@ -9,6 +10,11 @@
 import AddCard from './components/addCard.vue'
 import DisplayCards from './components/displayCards.vue'
 export default {
+  data() {
+    return {
+      arrayCards: []
+    }
+  },
   components: {
     'addCard': AddCard,
     'displayCards': DisplayCards

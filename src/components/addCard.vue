@@ -10,22 +10,27 @@
 
 <script>
 export default {
+    props: ['arrayCards'],
     data() {
         return {
             title: '',
-            text: '',
-            arrayCards: []
+            text: ''
         }
     },
     methods: {
         createCard() {
             let thisTitle = this.title;
             let thisText = this.text;
-            this.arrayCards.push({title: thisTitle, text: thisText});
-            setTimeout (function clearProps() {
-                document.getElementById('title').value = '';
-                document.getElementById('text').value = ''   
-            }, 100)
+            if (document.getElementById('title').value != ''|| document.getElementById('text').value != '') {  
+                this.arrayCards.push({title: thisTitle, text: thisText});
+                setTimeout (function clearProps() {
+                    document.getElementById('title').value = '';
+                    document.getElementById('text').value = ''   
+                }, 100);
+            }
+            
+            
+            
         }
     }
 }
