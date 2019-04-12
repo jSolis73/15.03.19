@@ -21,9 +21,13 @@ export default {
 
 <style>
   .col-3:hover {
-      background-color: red 
+      background-color: rgb(248, 86, 86);
+      transition-duration: 1.5s; 
   }  
+  .col-3:not(:hover) {
+      transition-duration: 1.5s;
+  }
 </style>
->
 
-</style>
+
+
