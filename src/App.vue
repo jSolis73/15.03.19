@@ -26,4 +26,11 @@ export default {
 }
 </script>
 
+<style>
+  body {
+    font-family: 'Indie Flower', cursive; 
+    font-size: 20pt;
+  }
+</style>
+
 
