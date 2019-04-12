@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3 v-if = "lengtArray < 11">{{message}}</h3>
-        <h3 v-else>{{alert}}</h3>
+        <h3 v-else class="p-3 bg-danger text-white">{{alert}}</h3>
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" :style = "{'width': valueProgress + '%'}">{{lengtArray}} из 10</div>
         </div>
@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             message: 'Вы можете добавлять карточки',
-            alert: 'Внимание. Превышено максимальное количество карточек'
+            alert: 'Внимание! Превышено максимальное количество карточек'
         }
     },
     computed: {

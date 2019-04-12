@@ -35,7 +35,7 @@ export default {
                 this.arrayCards.push({title, text});
                 setTimeout (function clearProps() {
                     document.getElementById('title').value = '';
-                    document.getElementById('text').value = ''   
+                    document.getElementById('text').value = '';  
                 }, 100);
             }  
         }
