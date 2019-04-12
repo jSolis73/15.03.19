@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style>
+  .col-3:hover {
+      background-color: red 
+  }  
+</style>
+>
 
 </style>
