@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class = "col-3 border border-success" v-for = "card in arrayCards">
+            <div class = "col-3 border border-success" v-for = "card in arrayCards" @click = "removeCard">
                 {{card.title}} <br> {{card.text}}
             </div>
         </div>
@@ -10,7 +10,12 @@
 
 <script>
 export default {
-    props: ['arrayCards']
+    props: ['arrayCards'],
+    methods: {
+        removeCard() {
+            return event.target.remove()
+        }
+    }
 }
 </script>
 
