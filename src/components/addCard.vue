@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h3>{{al}}</h3>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" style="padding-left: 230px">Title</label>      
             <div class="col-sm-10">
@@ -25,8 +24,7 @@ export default {
     data() {
         return {
             title: '',
-            text: '',
-            al: 'Вы можете добавлять карточки'
+            text: ''
         }
     },
     
@@ -34,7 +32,7 @@ export default {
         createCard() {
             let thisTitle = this.title;
             let thisText = this.text;
-            if (document.getElementById('title').value != ''|| document.getElementById('text').value != '') {  
+            if (document.getElementById('title').value != '' && document.getElementById('text').value != '') {  
                 this.arrayCards.push({title: thisTitle, text: thisText});
                 setTimeout (function clearProps() {
                     document.getElementById('title').value = '';
