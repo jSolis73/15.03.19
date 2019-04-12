@@ -1,18 +1,18 @@
 <template>
     <div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label" style="padding-left: 230px">Title</label>      
+            <label class="col-sm-2 col-form-label mt-2" style="padding-left: 230px">Title</label>      
             <div class="col-sm-10">
-                <textarea v-model = "title" id = "title" class="form-control" style="width: 40%"></textarea>    
+                <textarea v-model = "title" id = "title" class="form-control mt-3" style="width: 40%"></textarea>    
             </div>
             
-            <label class="col-sm-2 col-form-label" style="padding-left: 230px">Text</label>
+            <label class="col-sm-2 col-form-label mt-2" style="padding-left: 230px">Text</label>
             <div class="col-sm-10">
-                <textarea v-model = "text" id = "text" class="form-control" style="width: 40%"></textarea>
+                <textarea v-model = "text" id = "text" class="form-control mt-3" style="width: 40%"></textarea>
             </div> 
             
             <div class="col-sm-10" style="padding-left: 230px">    
-                <button type = "button" @click = "createCard" class="btn btn-primary">Add Card</button>
+                <button type = "button" @click = "createCard" class="btn btn-primary mt-3">Add Card</button>
             </div>             
         </div>    
     </div>
@@ -42,4 +42,5 @@ export default {
     }
 }
 </script>
+
 

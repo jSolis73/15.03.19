@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div id = "main">
     <progress-bar :arrayCards = "arrayCards"></progress-bar>
     <add-card :arrayCards = "arrayCards"></add-card>
     <displayCards :arrayCards = "arrayCards"></displayCards> 
@@ -30,6 +30,7 @@ export default {
   body {
     font-family: 'Indie Flower', cursive; 
     font-size: 20pt;
+    margin: 40px;
   }
 </style>
 
