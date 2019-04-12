@@ -38,11 +38,6 @@ export default {
                     document.getElementById('title').value = '';
                     document.getElementById('text').value = ''   
                 }, 100);
-            }
-            else if (this.arrayCards.length > 10) {
-                    return {
-                        al:'Внимание!!! Превышено максимальное значение карточек.' 
-                    }    
             }  
         }
     }
