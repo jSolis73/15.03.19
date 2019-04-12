@@ -27,13 +27,12 @@ export default {
             text: ''
         }
     },
-    
     methods: {
         createCard() {
-            let thisTitle = this.title;
-            let thisText = this.text;
+            let title = this.title;
+            let text = this.text;
             if (document.getElementById('title').value != '' && document.getElementById('text').value != '') {  
-                this.arrayCards.push({title: thisTitle, text: thisText});
+                this.arrayCards.push({title, text});
                 setTimeout (function clearProps() {
                     document.getElementById('title').value = '';
                     document.getElementById('text').value = ''   
