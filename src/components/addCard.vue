@@ -1,9 +1,6 @@
 <template>
     <div>
         <h3>{{al}}</h3>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" :style = "{'width': valueProgress + '%'}">{{lengtArray}} из 10</div>
-        </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" style="padding-left: 230px">Title</label>      
             <div class="col-sm-10">
@@ -32,14 +29,7 @@ export default {
             al: 'Вы можете добавлять карточки'
         }
     },
-    computed: {
-        lengtArray() {
-            return this.arrayCards.length
-        },
-        valueProgress() {
-            return this.arrayCards.length * 10
-        } 
-    },
+    
     methods: {
         createCard() {
             let thisTitle = this.title;
