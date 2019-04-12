@@ -23,4 +23,7 @@ export default {
 </script>
 
 <style>
+add-card {
+  margin-top: 0 !important;
+}
 </style>

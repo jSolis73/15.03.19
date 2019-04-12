@@ -4,11 +4,21 @@
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" :style = "{'width': valueProgress + '%'}">{{lengtArray}} из 10</div>
         </div>
-        <h5>Title</h5>
-        <p><textarea v-model = "title" id = "title"></textarea></p>
-        <h5>Text</h5>
-        <p><textarea v-model = "text" id = "text"></textarea></p>
-        <button type = "button" @click = "createCard">Add Card</button>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" style="padding-left: 230px">Title</label>      
+            <div class="col-sm-10">
+                <textarea v-model = "title" id = "title" class="form-control" style="width: 40%"></textarea>    
+            </div>
+            
+            <label class="col-sm-2 col-form-label" style="padding-left: 230px">Text</label>
+            <div class="col-sm-10">
+                <textarea v-model = "text" id = "text" class="form-control" style="width: 40%"></textarea>
+            </div> 
+            
+            <div class="col-sm-10" style="padding-left: 230px">    
+                <button type = "button" @click = "createCard" class="btn btn-primary">Add Card</button>
+            </div>             
+        </div>    
     </div>
 </template>
 
@@ -50,3 +60,4 @@ export default {
     }
 }
 </script>
+
