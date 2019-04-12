@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class = "col-3 border border-success" v-for = "card in arrayCards" v-bind:key = "card"  @click = "removeCard">
+            <div class = "col-3 border border-success" v-for = "card in arrayCards" :key = "card.id"  @click = "removeCard">
                 {{card.title}} <br> {{card.text}}
             </div>
         </div>
