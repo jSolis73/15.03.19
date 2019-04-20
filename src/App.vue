@@ -2,7 +2,6 @@
   <div>
     <form-field></form-field>
   </div>
-  
 </template>
 
 <script>
