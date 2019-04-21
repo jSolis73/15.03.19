@@ -1,44 +1,44 @@
 <template>
-    <div>
-        <form v-show = "show">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" v-model = "email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <div class = "m-4">
+        <form v-show = "show" style = "width: 25%">
+            <div class="form-group" >
+                <label for = "email">Email address</label>
+                <input type = "email" v-model = "email" class = "form-control" name = "email" placeholder = "Enter email">
             </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">About me</label>
-                <input type="email" v-model = "about" class="form-control" id="about" placeholder="Your name, age, etc">
+            <div class = "form-group">
+                <label for = "about">About me</label>
+                <input type = "text" v-model = "about" class = "form-control" name = "about" placeholder = "Your name, age, etc">
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" v-model = "checkedFields" class="form-check-input" id="sendNews" value = "Send news">
-                <label class="form-check-label" for="exampleCheck1">Send news</label>
+            <div class = "form-group form-check">
+                <input type = "checkbox" v-model = "checkedFields" class = "form-check-input" name = "sendNews" value = "Send news">
+                <label class = "form-check-label" for = "sendNews">Send news</label>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" v-model = "checkedFields" class="form-check-input" id="acceptRules" value = "accept rules">
-                <label class="form-check-label" for="exampleCheck1">accept rules</label>
+            <div class = "form-group form-check">
+                <input type = "checkbox" v-model = "checkedFields" class = "form-check-input" name = "acceptRules" value = "Accept rules">
+                <label class = "form-check-label" for = "acceptRules">Accept rules</label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" v-model = "gender" type="radio" name="radio1" id="male" value="male">
-                <label class="form-check-label" for="exampleRadios1">
+            <div class = "form-check">
+                <input class = "form-check-input" v-model = "gender" type="radio" name = "radio1" value = "male">
+                <label class = "form-check-label" for = "radio1">
                     male
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" v-model = "gender" type="radio" name="radio2" id="female" value="female">
-                <label class="form-check-label" for="exampleRadios2">
+            <div class = "form-check">
+                <input class = "form-check-input" v-model = "gender" type = "radio" name = "radio2" value = "female">
+                <label class = "form-check-label" for = "radio2">
                     female
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary" @click = "show = !show">Submit</button>
+            <button type = "submit" class = "btn btn-primary mt-3" @click.prevent = "show = !show"> Submit </button>
         </form>
-        <div v-show = "!show">
-            <p>Email adress: {{email}}</p>
-            <p>About me: {{about}}</p>
-            <p>Options</p>
-            <ul>
+        <div v-show = "!show" class = "h4 bg-secondary p-1" style = "width: 35%">
+            <p class = "bg-info text-white ">Email adress: {{email}}</p>
+            <p class = "bg-info text-white">About me: {{about}}</p>
+            <p class = "bg-info text-white">Options:</p>
+            <ul class = "bg-info text-white">
                 <li v-for = "option in checkedFields" :key = "option"> {{option}} </li>
             </ul>
-            <p>Gender: {{gender}}</p>
+            <p class = "bg-info text-white">Gender: {{gender}}</p>
         </div> 
     </div>    
 </template>
