@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class = "col-3 border border-success" v-for = "card in arrayCards" :key = "card.id"  @click = "removeCard">
+            <div class = "col-3 border border-success" v-for = "(card, index) in this.arrayCards" :key = "card.id"  @click = "removeCard()">
                 {{card.title}} <br> {{card.text}}
             </div>
         </div>
@@ -12,8 +12,8 @@
 export default {
     props: ['arrayCards'],
     methods: {
-        removeCard() {
-            return event.target.remove()
+        removeCard(index) {
+            return this.arrayCards.splice(index, 1)
         }
     }
 }

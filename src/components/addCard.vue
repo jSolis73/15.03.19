@@ -12,7 +12,7 @@
             </div> 
             
             <div class="col-sm-10" style="padding-left: 230px">    
-                <button type="button" @click = "this.arrayCards.push({title, text})" class="btn btn-primary mt-3">Add Card</button>
+                <button type="button" @click = "arrayCards.push({title, text})" class="btn btn-primary mt-3">Add Card</button>
             </div>             
         </div>    
     </div>
