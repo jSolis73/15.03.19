@@ -29,7 +29,8 @@
                     female
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary mt-3" @click.prevent="show=!show"> Submit </button>
+            <check-inform></check-inform>
+            <p><button type="submit" class="btn btn-primary mt-3" @click.prevent="show=!show"> Submit </button></p>
         </form>
         <div v-show="!show" class="h4 bg-secondary p-1" style="width: 35%">
             <p class="bg-info text-white ">Email adress: {{email}}</p>
@@ -38,9 +39,8 @@
             <ul class="bg-info text-white">
                 <li v-for="option in checkedFields" :key="option"> {{option}} </li>
             </ul>
-            <p class="bg-info text-white">Gender: {{gender}}</p>
-            <check-inform></check-inform>
-        </div> 
+            <p class="bg-info text-white">Gender: {{gender}}</p>  
+        </div>   
     </div>    
 </template>
 
