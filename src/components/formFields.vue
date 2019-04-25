@@ -9,6 +9,7 @@
                 <label for="about">About me</label>
                 <input type="text" v-model="about" class="form-control" name="about" placeholder="Your name, age, etc">
             </div>
+            <div v-show="!checked">
             <div class="form-group form-check">
                 <input type="checkbox" v-model="checkedFields" class="form-check-input" id="sendNews" value="Send news">
                 <label class="form-check-label" for="sendNews">Send news</label>
@@ -17,19 +18,20 @@
                 <input type="checkbox" v-model="checkedFields" class="form-check-input" id="acceptRules" value="Accept rules">
                 <label class="form-check-label" for="acceptRules">Accept rules</label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" v-model="gender" type="radio" id="radio1" value="male">
-                <label class="form-check-label" for="radio1">
-                    male
-                </label>
+                <div class="form-check">
+                    <input class="form-check-input" v-model="gender" type="radio" id="radio1" value="male">
+                    <label class="form-check-label" for="radio1">
+                        male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" v-model="gender" type="radio" id="radio2" value="female">
+                    <label class="form-check-label" for="radio2">
+                        female
+                    </label>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" v-model="gender" type="radio" id="radio2" value="female">
-                <label class="form-check-label" for="radio2">
-                    female
-                </label>
-            </div>
-            <check-inform></check-inform>
+            <check-inform v-model="checked"></check-inform>
             <p><button type="submit" class="btn btn-primary mt-3" @click.prevent="show=!show"> Submit </button></p>
         </form>
         <div v-show="!show" class="h4 bg-secondary p-1" style="width: 35%">
@@ -53,7 +55,8 @@ export default {
             email: '',
             about: '',
             checkedFields: [],
-            gender: ''
+            gender: '',
+            checked: 'false'
         }
     },
     components: {'checkInform': checkInformation}
