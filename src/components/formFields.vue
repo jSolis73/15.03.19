@@ -39,11 +39,13 @@
                 <li v-for="option in checkedFields" :key="option"> {{option}} </li>
             </ul>
             <p class="bg-info text-white">Gender: {{gender}}</p>
+            <check-inform></check-inform>
         </div> 
     </div>    
 </template>
 
 <script>
+import checkInformation from './checkInformation.vue'
 export default {
     data() {
         return {
@@ -53,6 +55,7 @@ export default {
             checkedFields: [],
             gender: ''
         }
-    }
-}
+    },
+    components: {'checkInform': checkInformation}
+}    
 </script>
