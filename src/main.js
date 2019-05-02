@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import formFields from './components/formFields.vue'
+import Color from './directives/color'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-Vue.component ('form-field', formFields)
+Vue.directive ('color', Color)
 new Vue({
   el: '#app',
   render: h => h(App)

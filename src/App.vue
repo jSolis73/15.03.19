@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form-field></form-field>
+    <h1>{{message}}</h1>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 export default {
   data() {
     return {
+      message: 'there is using my directive'
     }
   }
 }
