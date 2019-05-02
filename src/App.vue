@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{message}}</h1>
+    <h1 v-color.delayColor>{{message}}</h1>
   </div>
 </template>
 
@@ -16,7 +16,9 @@ export default {
 </script>
 
 <style>
-  
+  h1 {
+    transition-duration: .9s;
+  }
 </style>
 
 
