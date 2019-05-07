@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Color from './directives/color'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import moment from 'moment'
 
-Vue.directive ('color', Color)
+Vue.use (moment)
 new Vue({
   el: '#app',
   render: h => h(App)
