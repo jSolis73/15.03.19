@@ -1,9 +1,8 @@
 export default {
     bind(el, bindings, vnode) {
-        el.style.background = 'green';
-        el.style.fontSize = '20px';
-        el.style.fontStyle = 'italic';
-
+        const args = bindings.arg;
+        el.style[args] = bindings.value;
+        
         const delayColor = bindings.modifiers['delayColor'];
         if (delayColor) {
             function randomColor() {
