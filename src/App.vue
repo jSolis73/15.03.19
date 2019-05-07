@@ -1,6 +1,6 @@
 <template>
   <div>
-   <h4>{{firstDate | dateDiffertence}}</h4> 
+   <h4>{{firstDate | dateDifference}}</h4> 
   </div>
 </template>
 
@@ -9,20 +9,20 @@
 export default {
   filters: {
     dateDifference (value) {
-      value = Date.now() / 1000 - firstDate.getTime() / 1000
-      if (value <= 60)
+      let result = Date.now() / 1000 - value.getTime() / 1000
+      if (result <= 60)
         return "Только что";
-      else if (value <= 3600)
-        return value / 60 + "минут назад";
-      else if (value >= 3600 && value < 3600 * 24)
-        return firstDate.getHours() + firstDate.getMinutes();
-      else if (value >= 3600 * 24)
-        return firstDate.getDate() + firstDate.getMonth();
+      else if (result <= 3600)
+        return result / 60 + "минут назад";
+      else if (result >= 3600 && result < 3600 * 24)
+        return value.getHours() + value.getMinutes();
+      else if (result >= 3600 * 24)
+        return value.getDate() + value.getMonth();
     }
   },
   data() {
     return {
-      firstDate: new Date (2019, 4, 7),
+      firstDate: new Date (2019, 4, 6),
 
     }
   }
