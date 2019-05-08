@@ -17,8 +17,11 @@ export default {
         return Math.round(result / 60) + " минут назад";
       else if (result >= 3600 && result < 3600 * 24)
         return value.getHours() + " часов " + value.getMinutes() + " минут";
-      else if (result >= 3600 * 24)
-        return value.getDate() + "." + (+value.getMonth()+1);
+      else if (result >= 3600 * 24) {
+        let day = moment(value).format("DD, MM")
+        return day
+        // return value.getDate() + "." + (+value.getMonth()+1);
+      }
     }
   },
   data() {
