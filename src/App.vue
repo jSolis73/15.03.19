@@ -1,12 +1,15 @@
 <template>
   <div>
-   <h4>{{firstDate | dateDifference}}</h4> 
-   <h4>{{firstDate}}</h4> 
+    <ul>
+      <li v-for="someDate in dates" :key="someDate.index">{{someDate | dateDifference}}</li>
+    </ul>
+   <!-- <h4>{{firstDate | dateDifference}}</h4> 
+   <h4>{{firstDate}}</h4>  -->
   </div>
 </template>
 
 <script>
-
+import moment from 'moment'
 export default {
   filters: {
     dateDifference (value) {
@@ -14,11 +17,12 @@ export default {
       if (result <= 60)
         return "Только что";
       else if (result <= 3600)
-        return Math.round(result / 60) + " минут назад";
+        return moment(value).startOf('result').fromNow();  
+        // return Math.round(result / 60) + " минут назад";
       else if (result >= 3600 && result < 3600 * 24)
         return value.getHours() + " часов " + value.getMinutes() + " минут";
       else if (result >= 3600 * 24) {
-        let day = moment(value).format("DD, MM")
+        let day = moment(value).format("MMMM Do YYYY")
         return day
         // return value.getDate() + "." + (+value.getMonth()+1);
       }
@@ -26,8 +30,12 @@ export default {
   },
   data() {
     return {
-      firstDate: new Date (2019, 4, 7, 19, 52),
-
+      dates: [
+        new Date (2019, 4, 8, 22, 7),
+        new Date (2019, 4, 8, 21, 40),
+        new Date (2019, 4, 8, 13, 40),
+        new Date (2019, 4, 3, 13, 40)
+      ]
     }
   }
 }
