@@ -1,15 +1,15 @@
 <template>
   <div>
     <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <router-link class="nav-link" to="/">Главная</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link class="nav-link" :to="'/team'">Наша команда</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link class="nav-link" to="/about">О нас</router-link>
-      </li>
+      <router-link tag="li" class="nav-item" to="/">
+        <a class="nav-link">Главная</a>
+      </router-link>
+      <router-link tag="li" class="nav-item" to="/team">
+        <a class="nav-link">Наша команда</a>
+      </router-link> 
+      <router-link tag="li" class="nav-item" to="/about">
+        <a class="nav-link">О нас</a>
+      </router-link>           
     </ul>
 
     <router-view></router-view>  
