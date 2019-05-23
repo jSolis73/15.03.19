@@ -1,20 +1,20 @@
 <template>
     <div>
-        <table class="table table-bordered">  
+        <table class="table table-bordered h4">  
             <tbody>
                 <tr>
-                    <td>
+                    <td class="border border-primary rounded-pill">
                         <router-link tag="a" to="/team/Vasiliy">Василий</router-link>
                     </td>
-                    <td>
+                    <td class="border border-secondary">
                         <router-link tag="a" to="/team/Semien">Семён</router-link>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="border border-success">
                         <router-link tag="a" to="/team/Anatol">Анатолий</router-link>
                     </td>
-                    <td>
+                    <td class="border border-dark">
                         <router-link tag="a" to="/team/Stanislav">Станислав</router-link>
                     </td>
                 </tr>

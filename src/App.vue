@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h5">
     <ul class="nav justify-content-center">
       <router-link tag="li" class="nav-item" to="/">
         <a class="nav-link">Главная</a>
