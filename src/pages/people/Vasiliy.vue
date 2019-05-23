@@ -3,7 +3,7 @@
         <h5>{{name}}</h5>
         <p>{{position}}</p>
         <p>{{experience}}</p>
-        <img :src="require('../images/Stan.jpg')">
+        <img :src="require('../../images/Stan.jpg')">
     </div>
 </template>
 

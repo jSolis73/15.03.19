@@ -4,22 +4,23 @@
             <tbody>
                 <tr>
                     <td>
-                        <p>Василий</p>
+                        <router-link tag="a" to="/team/Vasiliy">Василий</router-link>
                     </td>
                     <td>
-                        <p>Семён</p>
+                        <router-link tag="a" to="/team/Semien">Семён</router-link>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Анатолий
+                        <router-link tag="a" to="/team/Anatol">Анатолий</router-link>
                     </td>
                     <td>
-                        Станислав
+                        <router-link tag="a" to="/team/Stanislav">Станислав</router-link>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <router-view></router-view>
     </div>
 </template>
 
