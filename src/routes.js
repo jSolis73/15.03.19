@@ -6,7 +6,7 @@ import About from './pages/About'
 export default new VueRouter({
     routes: [
         {
-            path: '',
+            path: '/',
             component: Home
         },
         {

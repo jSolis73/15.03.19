@@ -2,13 +2,13 @@
   <div>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="#">Главная</a>
+        <router-link class="nav-link" to="/">Главная</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Наша команда</a>
+        <router-link class="nav-link" :to="'/team'">Наша команда</router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">О нас</a>
+        <router-link class="nav-link" to="/about">О нас</router-link>
       </li>
     </ul>
 
