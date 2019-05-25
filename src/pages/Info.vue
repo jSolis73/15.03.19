@@ -2,9 +2,9 @@
     <div>
         <div v-for="(man, index) in people" :key="index">
             <div v-if="infoId ==man.manId">
-                <h5>{{man.name}}</h5>
-                <p>{{man.position}}</p> 
-                <p>{{man.experience}}</p> 
+                <h5>Имя: {{man.name}}</h5>
+                <p>Должность: {{man.position}}</p> 
+                <p>Опыт работы: {{man.experience}}</p> 
                 <img :src="man.image"> 
             </div>
         </div>
