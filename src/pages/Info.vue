@@ -1,22 +1,19 @@
 <template>
-    <div class="m-5">
-        <table class="table table-bordered h4">  
-            <tbody>
-                <tr>
-                    <td class="border border-primary rounded-pill"
-                        v-for=" (man, index) in people"
-                        :key="index">
-                        <a @click="goToInfo(man.manId)">{{man.name}}</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <router-view></router-view>
+    <div>
+        <div v-for="(man, index) in people" :key="index">
+            <div v-if="infoId ==man.manId">
+                <h5>{{man.name}}</h5>
+                <p>{{man.position}}</p> 
+                <p>{{man.experience}}</p> 
+                <img :src="man.image"> 
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+    name: 'Info',
     data() {
         return {
             people: [
@@ -48,14 +45,10 @@ export default {
                     image: require('../images/Stan.jpg'),
                     manId: 4
                 }
-            ]
-        }
-    },
-    methods: {
-        goToInfo(infoId) {
-            this.$router.push({name: 'Info', params: {iId: infoId}})
+            ],
+            infoId: this.$route.params.iId,
+            title: "Info"
         }
     }
 }
 </script>
-
