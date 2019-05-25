@@ -8,6 +8,7 @@
                 <img :src="man.image"> 
             </div>
         </div>
+        <button class="btn btn-primary" @click="goBack">Назад</button>
     </div>
 </template>
 
@@ -48,6 +49,11 @@ export default {
             ],
             infoId: this.$route.params.iId,
             title: "Info"
+        }
+    },
+    methods: {
+        goBack() {
+            this.$router.push('/team')
         }
     }
 }
